@@ -17,29 +17,44 @@ const container = style({
 
 const box = style({
   display: 'flex',
-  padding: '1rem',
+  padding: '24px 1rem',
   flexDirection: 'column',
-  gap: '1rem',
-  borderRadius: '1rem',
-  backgroundColor: '#F3F4F5',
-});
-
-const row = style({
-  display: 'flex',
+  gap: '12px',
+  borderRadius: '12px',
+  backgroundColor: '#F2F3F5',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  textAlign: 'center',
 });
 
-const switchItem = style({});
+const stepStyle = style({});
+globalStyle(`${stepStyle} > div > div > div[class^="_option_"]`, {
+  backgroundColor: 'var(--color-light-neutral-translucent-1300)',
+  color: 'var(--color-light-text-primary-inverted)',
+});
 
-globalStyle(`${switchItem} > span > span:first-child`, {
-  fontWeight: 500,
+const cellItem = style({
+  borderRadius: '12px',
+  backgroundColor: '#F2F3F5',
+  padding: '12px 16px',
+});
+const preItem = style({
+  borderRadius: '16px',
+  backgroundColor: '#F2F3F5',
+  padding: '1rem',
+});
+const rowSb = style({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  gap: '8px',
 });
 
 export const appSt = {
   bottomBtn,
   container,
   box,
-  row,
-  switchItem,
+  stepStyle,
+  cellItem,
+  preItem,
+  rowSb,
 };
